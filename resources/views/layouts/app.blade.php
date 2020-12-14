@@ -20,19 +20,20 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/estilos.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md shadow-sm" style="background-color: #ffffff !important;">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand title__nav" href="{{ url('/') }}">
                     <img src="{{ asset('img/insta.png') }}" 
                     width="50" class="img-fluid mr-2 pointer "
                     alt="" > 
-                    Clon Instagram
-                    <svg aria-label="Activity Feed"  class="m1007" fill="red" height="22" viewBox="0 0 48 48" 
-                    width="22"><path style="background-color: red" d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z"></path></svg>
-                </a>
+                    Like ME
+                    </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
                  aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -46,7 +47,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto nav__options mt-4" >
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -61,20 +62,41 @@
                             @endif
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('home') }}">
-                                Inicio</a>
+                               
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <span class="material-icons" style="color: #ff697b">
+                                            account_circle
+                                            </span>
+                                        </div>
+                                        <div class="col-1">
+                                            <a class="" href="{{ route('image.create') }}">Postear</a>
+                                        </div>
+                                    </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('image.create') }}">
-                                Subir Imagen</a>
+                                <div class="row">
+                                    <div class="col-1">
+                                        <span class="material-icons" style="color: #ff697b">
+                                            thumb_up
+                                        </span>
+                                    </div>
+                                    <div class="col-1">
+                                        <a class="" href="{{ route('likes') }}">LIKES</a>
+                                    </div>
+                                </div>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('likes') }}">
-                                Favoritas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('user.index') }}">
-                                Gente</a>
+                            <li class="nav-item ">
+                                <div class="row">
+                                    <div class="col-1">
+                                        <span class="material-icons" style="color: #ff697b">
+                                        account_circle
+                                        </span>
+                                    </div>
+                                    <div class="col-1">
+                                        <a class="" href="{{ route('user.index') }}">Gente</a>
+                                    </div>
+                                </div>
                             </li>
                             <li class="nav-item">
                                 &nbsp;
@@ -98,15 +120,24 @@
                                 aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item"
                                         href="{{ route('profile',['id'=>Auth::user()->id]) }}">
-                                            Mi Perfil
+                                        <span class="material-icons" style="color: #ff697b">
+                                        account_circle
+                                        </span>
+                                        Mi Perfil
                                     </a>
                                 </a>
                                 <a class="dropdown-item" href="{{ route('config') }}">
+                                    <span class="material-icons" style="color: #ff697b">
+                                        construction
+                                    </span>
                                     Configuracion
                                 </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
+                                      <span class="material-icons" style="color: #ff697b">
+                                        forward
+                                        </span>
                                         Cerrar Sesion
                                     </a>
 

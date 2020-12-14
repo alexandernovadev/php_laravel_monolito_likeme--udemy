@@ -1,3 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+body {
+    font-family: 'Merienda', cursive !important;
+}
+.title__nav{
+   font-family: 'Merienda', cursive;
+    color: #ff697b !important;
+}
+
+.nav__options a{
+   font-family: 'Merienda', cursive;
+    color: black !important;
+    outline-style: none;
+}
+.nav__options a:hover{
+    color: #ff697b !important;
+    outline-style: none;
+    text-decoration: none;
+}
+
 .avatar_mask
 {
     height: 40px;
