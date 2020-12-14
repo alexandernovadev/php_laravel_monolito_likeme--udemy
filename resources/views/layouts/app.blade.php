@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Like ME</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -34,12 +34,11 @@
                     alt="" > 
                     Like ME
                     </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
-                 aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
+                    <button class="navbar-toggler border" type="button" data-toggle="collapse" 
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    &#x2631;
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
@@ -51,13 +50,32 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">
-                                    {{ __('Login') }}</a>
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <span class="material-icons" style="color: #ff697b">
+                                            account_circle
+                                            </span>
+                                        </div>
+                                        <div class="col-1">
+                                            <a class="" href="{{ route('login') }}">
+                                                {{ __('Login') }}</a>
+                                        </div>
+                                    </div>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">
-                                        Registrate</a>
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <span class="material-icons" style="color: #ff697b">
+                                            account_circle
+                                            </span>
+                                        </div>
+                                        <div class="col-1">
+                                            <a class="" href="{{ route('register') }}">
+                                                Registrate</a>
+                                        </div>
+                                    </div>
+                                 
                                 </li>
                             @endif
                         @else

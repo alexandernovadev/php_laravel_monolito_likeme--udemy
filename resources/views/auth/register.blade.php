@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row ">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Registro</div>
@@ -118,6 +118,17 @@
                     </form>
                 </div>
             </div>
+        </div>
+        <div class="col-md-4 mb-5" style="text-align: center">
+            <div class="stage">
+                <div class="box bounce-4">
+                    <img src="{{ asset('img/insta.png') }}" 
+                    width="100%" class="img-fluid mr-2 pointer "
+                    alt="" > 
+                </div>
+            </div>
+         
+            <p class="title__nav" style="font-size: 2rem">Like ME</p>
         </div>
     </div>
 </div>

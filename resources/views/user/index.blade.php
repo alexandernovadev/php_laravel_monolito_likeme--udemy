@@ -17,7 +17,6 @@
             </form>
             <hr>
             @foreach ($users as $user)
-            {{$user->image}}
             <div class="row">
                 <div class="col-4 pl-5">
                     <div class="avatar_mask_profile m-3 ">
