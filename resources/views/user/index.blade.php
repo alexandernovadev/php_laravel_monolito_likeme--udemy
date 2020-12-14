@@ -17,11 +17,19 @@
             </form>
             <hr>
             @foreach ($users as $user)
+            {{$user->image}}
             <div class="row">
                 <div class="col-4 pl-5">
                     <div class="avatar_mask_profile m-3 ">
+                        @if ( $user->image == '')
+                        <img src="{{ route('user.avatar',['filename'=>Auth::user()->image])}}" 
+                        alt="Imagen Avatar user" class="img-fuid">
+                        @else
                         <img src="{{ route('user.avatar',['filename'=>$user->image])}}" 
-                         alt="Imagen Avatar user" class="img-fuid">
+                        alt="Imagen Avatar user" class="img-fuid">
+                        @endif
+                  
+             
                     </div>
                 </div>
                 <div class="col-6 pt-3 w3-red">
