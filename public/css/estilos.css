@@ -1,0 +1,58 @@
+.avatar_mask
+{
+    height: 40px;
+    width: 40px;
+    border-radius: 900px;
+    overflow: hidden;
+    background: gray;
+}
+.avatar_mask img
+{
+    height: 40px;
+}
+.avatar_mask_profile
+{
+    height: 150px;
+    width: 150px;
+    border-radius: 900px;
+    overflow: hidden;
+    background: gray;
+}
+.avatar_mask_profile img
+{
+    height: 150px;
+}
+.tarjetaimagen
+{
+    padding: 0!important;
+    margin: 0!important;
+}
+.imagenhome
+{
+    height: 400px;
+    width: 100vw !important;
+}
+.imagendetail
+{
+    height: 600px;
+    width: 100vw !important;
+}
+.w3-center
+{
+    display:inline-block !important;
+    width:auto!important;
+}
+
+.pointer
+{
+    cursor: pointer !important;
+}
+
+.btn-removecomment{
+    float: right !important;
+    top: -60px !important;
+    position: relative;
+}
+.w3-text-grey,.w3-hover-text-grey:hover,.w3-text-gray,.w3-hover-text-gray:hover{color:#757575!important}
+.w3-tiny{font-size:10px!important}.w3-small{font-size:12px!important}.w3-medium{font-size:15px!important}.w3-large{font-size:18px!important}
+.w3-xlarge{font-size:24px!important}.w3-xxlarge{font-size:36px!important}.w3-xxxlarge{font-size:48px!important}.w3-jumbo{font-size:64px!important}
