@@ -1,4 +1,4 @@
-var url = 'http://localhost/course/IntragramLaravel/public/'
+var url = '/'
 
 window.addEventListener("load", function()
 {
@@ -7,7 +7,7 @@ window.addEventListener("load", function()
     function like ()
     {
         
-        $('.btn-like').unbind('click').click(function(){
+        $('.btn-like').click(function(){
             $(this).addClass('btn-dislike').removeClass('btn-like');
             $(this).attr('src', url+'img/heart-red.png')
             console.log("Like");
